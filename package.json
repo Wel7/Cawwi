@@ -1,0 +1,29 @@
+{
+  "name": "cawwi",
+  "version": "1.0.0",
+  "description": "A discord bot to follow some vtuber music release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wel7/Cawwi.git"
+  },
+  "keywords": [
+    "vtuber",
+    "vtubers",
+    "music"
+  ],
+  "author": "wellle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wel7/Cawwi/issues"
+  },
+  "homepage": "https://github.com/Wel7/Cawwi#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "discord.js": "^14.14.1"
+  }
+}
