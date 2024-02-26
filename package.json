@@ -2,10 +2,13 @@
   "name": "cawwi",
   "version": "1.0.0",
   "description": "A discord bot to follow some vtuber music release",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type":"module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "build": "tsc && cp ./src/.env ./dist/.env",
+    "build:watch": "tsc --watch",
+    "start": "npm run build && node dist/index.js",
+    "start:pm2": "npm run build && pm2 start dist/index.js --watch --name cawwi"
   },
   "repository": {
     "type": "git",
@@ -17,13 +20,19 @@
     "music"
   ],
   "author": "wellle",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Wel7/Cawwi/issues"
   },
   "homepage": "https://github.com/Wel7/Cawwi#readme",
   "dependencies": {
+    "@types/node": "^20.11.20",
     "axios": "^1.6.7",
-    "discord.js": "^14.14.1"
+    "discord-api-types": "^0.37.71",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }
