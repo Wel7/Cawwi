@@ -8,7 +8,7 @@
     "build": "tsc && cp ./src/.env ./dist/.env",
     "build:watch": "tsc --watch",
     "start": "npm run build && node dist/index.js",
-    "start:pm2": "npm run build && pm2 start dist/index.js --watch --name cawwi"
+    "start:pm2": "npm run build && pm2 start ecosystem.config.js"
   },
   "repository": {
     "type": "git",

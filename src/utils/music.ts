@@ -26,7 +26,6 @@ export async function getNewMusic(org: string, topic: string) {
         ) {
           musicVideos.push(video.id);
         } else if (release < new Date()) {
-          console.log(1);
           return true;
         }
       });
